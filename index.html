@@ -1,0 +1,28 @@
+<html>
+<head>
+
+</head>
+<body>
+
+  <image id="photo" src="photo.jpg">
+  </image>
+
+  <audio id="audio">
+    <source src="music.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+  const audio = document.getElementById('audio');
+  const photo = document.getElementById('photo');
+
+  photo.addEventListener('click', () => {
+    if (audio.paused) {
+      audio.play();
+    } else {
+      audio.pause();
+    }
+  });
+  </script>
+
+</body>
+</html>
