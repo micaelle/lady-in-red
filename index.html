@@ -1,26 +1,27 @@
 <html>
 <head>
-
+  <style>
+  body {
+    margin: 0;
+    background-color: rgb(50 5 10);
+    background-image: url('photo.jpg');
+    background-size: contain;
+    background-position: center; 
+    background-repeat: no-repeat;
+  }
+  </style>
 </head>
-<body style="margin:0; display: flex; align-items: center; justify-content: center;">
 
-  <image id="photo" src="photo.jpg" style="width:100%" />
+<body>
 
   <audio id="audio">
     <source src="music.mp3" type="audio/mpeg">
   </audio>
 
   <script>
-  const audio = document.getElementById('audio');
-  const photo = document.getElementById('photo');
-
-  photo.addEventListener('click', () => {
-    if (audio.paused) {
-      audio.play();
-    } else {
-      audio.pause();
-    }
-  });
+    const audio = document.getElementById('audio');
+    const body = document.querySelector('body');
+    body.addEventListener('click', () => { audio.paused ? audio.play() : audio.pause(); });
   </script>
 
 </body>
